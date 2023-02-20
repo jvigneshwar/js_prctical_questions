@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var personAccount = {
+            firstName:"vicky",
+            lastName:"j",
+            incomes:{
+                job:50000,
+                freelancing:10000
+            },
+            expenses:{
+                house_rent:7000,
+                food:5000,
+                emi:10000
+            },
+            totalIncome:60000,
+            totalExpense:22000,
+            accountInfo:"Indian Bank",
+            addIncome:function(incomeType,amount){
+                this.incomes[incomeType] = amount;
+                this.totalIncome += amount;
+            },
+            addExpense:function(expensesType,amount){
+                this.incomes[expensesType] = amount;
+                this.totalExpense += amount;
+            },
+            accountBalance:0,
+            addAccountBalance:function(){
+                this.accountBalance = this.totalIncome-this.totalExpense; 
+            }
+        }
+        personAccount.addAccountBalance();
+        personAccount.addIncome("ello",1000);
+        console.log(personAccount);
+    </script>
+</body>
+</html>
